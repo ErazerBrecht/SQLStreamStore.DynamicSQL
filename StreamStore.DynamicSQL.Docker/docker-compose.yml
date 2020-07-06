@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  sql:
+    image: postgres:9.6
+    restart: always
+    volumes: 
+      - sql-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: admin
+    ports:
+      - 5432:5432
+volumes:
+  sql-data:
