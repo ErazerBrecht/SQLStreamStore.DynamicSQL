@@ -1,5 +1,5 @@
-# StreamStore.DynamicSQL
-Bug repro for 'slow subsribe' when using PostgresSQL implemantion
+# SQLStreamStore.DynamicSQL
+Bug repro for 'slow subscribe' when using PostgresSQL implemantion
 
 ## Proposed fix:
 ```
