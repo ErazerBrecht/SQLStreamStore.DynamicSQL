@@ -1,5 +1,6 @@
 # SQLStreamStore.DynamicSQL
-Bug repro for 'slow subscribe' when using PostgresSQL implemantion
+Bug repro for 'slow subscribe' when using PostgreSQL implemantion.
+https://github.com/SQLStreamStore/SQLStreamStore/issues/428
 
 ## Proposed fix:
 ```
