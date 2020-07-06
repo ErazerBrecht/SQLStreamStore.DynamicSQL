@@ -15,7 +15,6 @@ namespace StreamStore.DynamicSQL
 
     public class EventBomber : IEventBomber
     {
-        private const string Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&é@\"\\#'(§^è!ç{à})°-_^¨[]$*%ù´`µ£;.:/=+~<>\\";
         private const string StreamName = "TestPostgresPerformanceStream";
         private const long MaxAmountOfEvents = 2500000;
         private readonly IStreamStore _streamStore;
@@ -23,7 +22,7 @@ namespace StreamStore.DynamicSQL
 
         public EventBomber(IStreamStore streamStore)
         {
-            _streamStore = streamStore;
+            _streamStore = streamStore ?? throw new ArgumentNullException(nameof(streamStore));
         }
 
         public async Task Bomb()
