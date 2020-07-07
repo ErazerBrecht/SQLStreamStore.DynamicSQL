@@ -29,7 +29,7 @@ namespace StreamStore.DynamicSQL
         {
             var collection = new ServiceCollection();
             
-            collection.AddEventStore("Host=localhost;Port=5432;User Id=postgres;Password=admin;Database=streamstore;Maximum Pool Size=75");
+            collection.AddEventStore("Host=localhost;Port=5432;User Id=postgres;Password=admin;Database=postgres;Maximum Pool Size=75");
             collection.AddScoped<IEventBomber, EventBomber>();
             collection.AddScoped<IEventSubscriber, EventSubscriber>();
             
